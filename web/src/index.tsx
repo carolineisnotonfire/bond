@@ -1,6 +1,6 @@
 import ReactDOM from "react-dom/client";
 import { InMemoryCache, ApolloProvider, ApolloClient } from "@apollo/client";
-import Routes from "./Routes";
+import Rotas from "./Rotas";
 
 
 const client = new ApolloClient({
@@ -13,6 +13,6 @@ const root = ReactDOM.createRoot(
 );
 root.render(
     <ApolloProvider client={client}>
-      <Routes />
+      <Rotas />
     </ApolloProvider>
 );

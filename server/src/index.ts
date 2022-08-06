@@ -31,9 +31,6 @@ import { sendRefreshToken } from "./Authentication/sendRefreshToken";
       console.log(err);
       return res.send({ ok: false, accessToken: "" });
     }
-
-    // token is valid and
-    // we can send back an access token
     const user = await User.findOne({ id: payload.userId });
 
     if (!user) {
@@ -63,7 +60,7 @@ import { sendRefreshToken } from "./Authentication/sendRefreshToken";
 
   apolloServer.applyMiddleware({ app });
 
-  app.listen(4000, () => {
+  app.listen(4001, () => {
     console.log("express server started");
   });
 })();
