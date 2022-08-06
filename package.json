@@ -1,8 +1,0 @@
-{
-  "dependencies": {
-    "apollo-client": "^2.6.10"
-  },
-  "devDependencies": {
-    "@graphql-codegen/cli": "^2.11.3"
-  }
-}
