@@ -1,9 +1,10 @@
 import { Button, TextField } from "@mui/material";
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { useRegisterMutation } from "../generated/graphql";
 
-interface Props {}
-export const Register: React.FC<Props> = () => {
+export const Register: React.FC = () => {
+  let navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [register] = useRegisterMutation();
@@ -18,9 +19,11 @@ export const Register: React.FC<Props> = () => {
             email,
             password
           }
-        })
+        });
 
-        console.log(response)
+        console.log(response);
+
+        navigate('/');
       }}
     >
       <div>
